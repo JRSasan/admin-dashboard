@@ -199,10 +199,18 @@ main {
     display: flex;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
+    padding-top: 2em;
+    padding-bottom: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .projects {
     flex: 3;
+}
+
+.projects h3 {
+    margin-bottom: 1em;
 }
 
 .projects > div {
@@ -210,7 +218,9 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fit, 1fr);
     overflow: auto;
-    gap: 1em;
+    gap: 2em;
+    padding-bottom: 1em;
+    padding-right: 1em;
 }
 
 .project-tile {
