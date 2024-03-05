@@ -13,7 +13,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: max-content max-content max-content;
     height: 100vh;
 }
 
@@ -37,6 +37,8 @@ aside h1 {
     font-size: 2em;
     padding-left: 0.6em;
     margin-top: 0.5em;
+    position: sticky;
+    top: 1em;
 }
 
 aside h1 svg {
@@ -50,6 +52,8 @@ nav {
     gap: 20px;
     padding-left: 2em;
     margin-top: 3em;
+    position: sticky;
+    top: 8em;
 }
 
 nav a {
@@ -80,10 +84,14 @@ header {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-column: 2 / 4;
-    grid-row: 1 / 2;
     box-shadow: 0 0.2em 0.2em rgba(0,0,0,0.3);
     padding-left: 3em;
     padding-right: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    position: sticky;
+    top: -5em;
+    background-color: #fffeff;
 }
 
 header > div {
@@ -94,6 +102,7 @@ header > div:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    margin-top: 1em;
 }
 
 
@@ -181,6 +190,61 @@ form input {
     font-size: 0.9em;
     width: 7em;
     margin-left: 2em;
+}
+
+/* MAIN CONTENT */
+
+main {
+    background-color: #e1e7ef;
+    display: flex;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+
+.projects {
+    flex: 3;
+}
+
+.projects > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    overflow: auto;
+    gap: 1em;
+}
+
+.project-tile {
+    display: grid;
+    border-radius: 0.5em;
+    background-color: white;
+    box-shadow:
+            inset 0.5em 0 0 rgb(176,191,26),
+            0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+    padding: 2em;
+}
+
+.project-tile article {
+    margin-bottom: 5em;
+}
+
+.project-tile article p {
+    font-size: 1em;
+}
+
+.project-tile div {
+    justify-self: end;
+    align-self: end;
+}
+
+.project-tile svg {
+    width: 2em;
+    height: 2em;
+    margin-right:  1em;
+    fill: black;
+}
+
+.announcements {
+    flex: 1;
 }
 
 
